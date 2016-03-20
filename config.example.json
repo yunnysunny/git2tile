@@ -1,0 +1,21 @@
+{
+    "port":8800,
+	"debuglogfilename":"调试日志",
+	"tracelogfilename":"express访问日志",
+	"errorlogfilename":"错误日志",
+    "clientId" : "worktile应用id",
+    "clientSecret" : "worktile应用密钥",
+    "redirectUrl":"worktile oauth2回调地址",
+    "gitlabApi":"http://你gitlab服务器的域名/api/v3",
+    "privateKey" : "gitlab调用接口使用的private_key",
+    "uploadConfig" : {
+        "git@gitlab服务器域名:用户名/项目名.git,总之这个地方填写项目的ssh地址":{
+            "files":["git项目中的文件路径，例如readme.md,src/app.js"],
+            "worktile":{
+                "projectId":"要上传到的项目的项目ID",
+                "folderId":"要上传到项目的文件夹ID"
+            }
+        }
+    }
+
+}

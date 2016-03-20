@@ -1,0 +1,6 @@
+/.idea
+/node_modules
+/*.iml
+/*.log
+/config.json
+/src/data/oauth_worktile.json
