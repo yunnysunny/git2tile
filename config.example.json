@@ -15,6 +15,14 @@
                 "projectId":"要上传到的项目的项目ID",
                 "folderId":"要上传到项目的文件夹ID"
             }
+        },
+        "git@gitlab.ohwit.com:wkt/express-demo.git":{
+            "files":["readme.md"],
+            "fileType":"doc",
+            "worktile":{
+                "projectId":"69bd42ccae144fbbb7c63269394842ee",
+                "pageData":{"readme.md":"8e111a59e36948e6af1fdd2a25f1d301"}
+            }
         }
     }
 
