@@ -1,6 +1,6 @@
 # git2tile
 
-将gitlab上提交的文件自动上传到worktile。
+将gitlab上提交的文档自动同步到worktile。
 
 ## 配置说明
 将config.example.json复制一份，重命名为config.josn。
@@ -17,11 +17,12 @@
     "gitlabApi":"http://你gitlab服务器的域名/api/v3",
     "privateKey" : "gitlab调用接口使用的private_key",
     "uploadConfig" : {
-        "git@gitlab服务器域名:用户名/项目名.git,总之这个地方填写项目的ssh地址":{
+        "git@gitlab.ohwit.com:wkt/express-demo.git":{
             "files":["git项目中的文件路径，例如readme.md,src/app.js"],
+            "fileType":"doc",
             "worktile":{
                 "projectId":"要上传到的项目的项目ID",
-                "folderId":"要上传到项目的文件夹ID"
+                "pageData":{"readme.md":"文档ID"}
             }
         }
     }
@@ -40,13 +41,13 @@ oauth2的access_token信息打印出来，将其复制粘贴出来，然后在`s
 接下来就是gitlab端的配置，你可以从`http://你的gitlab域名/profile/account`中得到Private token值，
 在这里对应配置项`privateKey`。
 
-`uploadConfig`定义一个gitlab到worktile的上传文件映射关系，其键值为git项目的ssh地址。
+`uploadConfig`定义一个gitlab到worktile的同步文件映射关系，其键值为git项目的ssh地址。
 具体到子属性，`files`属性为gitlab上要上传的文件路径，写相对于项目的相对路径即可；`worktile`
-属性为对应的worktile网站上的项目和文件夹配置，在worktile面板上选择一个项目，然后选择`文件`
-菜单，打开一个你想要保存的文件夹，这时候地址栏中地址是这个样子的：
+属性为对应的worktile网站上的项目和文档配置，在worktile面板上选择一个项目，然后选择`文档`
+菜单，打开一个你想要同步的文档，这时候地址栏中地址是这个样子的：
 
-`https://worktile.com/project/xxx/folder/xxx`
-project后面的数字即为项目ID，folder后面的即为文件夹ID。
+`https://worktile.com/project/xxx/page/xxx`
+project后面的数字即为项目ID，page后面的即为文档ID。
 
 
 ## 部署说明

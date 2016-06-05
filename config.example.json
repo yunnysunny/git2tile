@@ -9,19 +9,13 @@
     "gitlabApi":"http://你gitlab服务器的域名/api/v3",
     "privateKey" : "gitlab调用接口使用的private_key",
     "uploadConfig" : {
-        "git@gitlab服务器域名:用户名/项目名.git,总之这个地方填写项目的ssh地址":{
-            "files":["git项目中的文件路径，例如readme.md,src/app.js"],
-            "worktile":{
-                "projectId":"要上传到的项目的项目ID",
-                "folderId":"要上传到项目的文件夹ID"
-            }
-        },
+
         "git@gitlab.ohwit.com:wkt/express-demo.git":{
-            "files":["readme.md"],
+            "files":["git项目中的文件路径，例如readme.md,src/app.js"],
             "fileType":"doc",
             "worktile":{
-                "projectId":"69bd42ccae144fbbb7c63269394842ee",
-                "pageData":{"readme.md":"8e111a59e36948e6af1fdd2a25f1d301"}
+                "projectId":"要上传到的项目的项目ID",
+                "pageData":{"readme.md":"文档ID"}
             }
         }
     }
