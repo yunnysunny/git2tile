@@ -13,7 +13,7 @@
   "dependencies": {
     "body-parser": "~1.17.2",
     "ejs": "~2.5.5",
-    "express": "~4.15.3",
+    "express": "~4.16.0",
     "log4js": "~0.6.22",
     "async": "~1.5.0",
     "request": "~2.81.0",
