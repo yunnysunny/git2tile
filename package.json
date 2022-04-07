@@ -15,7 +15,7 @@
     "ejs": "~2.5.5",
     "express": "~4.16.0",
     "log4js": "~0.6.22",
-    "async": "~1.5.0",
+    "async": "~3.2.2",
     "request": "~2.88.0",
     "gitlab": "~1.5.0",
     "stream-buffers": "~3.0.0"
